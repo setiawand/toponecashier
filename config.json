@@ -1,0 +1,11 @@
+{
+  "store_name": "Warung Grosir Sumber Rejeki",
+  "store_address": "Jl. Contoh No. 1, Jakarta",
+  "store_phone": "08123456789",
+  "low_stock_threshold": 5,
+  "printer": {
+    "type": "usb",
+    "vendor_id": "0x0416",
+    "product_id": "0x5011"
+  }
+}

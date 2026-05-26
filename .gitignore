@@ -1,1 +1,6 @@
 .superpowers/
+__pycache__/
+*.pyc
+*.db
+.venv/
+receipts/*.txt
