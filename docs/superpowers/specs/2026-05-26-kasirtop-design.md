@@ -164,7 +164,7 @@ CREATE TABLE stock_in_items (
 | Tab | Konten |
 |---|---|
 | Harian | Total transaksi hari ini, total omzet, estimasi laba kotor |
-| Periode | Pilih rentang tanggal, grafik bar omzet per hari (`QChart`), tabel ringkasan |
+| Periode | Pilih rentang tanggal, grafik bar omzet per hari (`matplotlib` embedded di PyQt6), tabel ringkasan |
 | Stok | Daftar semua produk + stok saat ini, highlight merah jika hampir habis (≤ 5) |
 | Per Produk | Produk terlaris (by qty), total qty terjual, total laba per produk |
 
@@ -226,7 +226,7 @@ File `config.json` di root project menyimpan:
   }
 }
 ```
-Dapat diubah via layar Settings sederhana (opsional di v1, atau edit file langsung).
+Di v1, tidak ada layar Settings — pengguna mengedit `config.json` langsung menggunakan teks editor.
 
 ---
 
@@ -235,16 +235,17 @@ Dapat diubah via layar Settings sederhana (opsional di v1, atau edit file langsu
 ```
 PyQt6>=6.6.0
 python-escpos>=3.0
+matplotlib>=3.8.0
 ```
 
-Instalasi: `pip install PyQt6 python-escpos`
+Instalasi: `pip install PyQt6 python-escpos matplotlib`
 
 ---
 
 ## 10. Batasan Versi 1
 
 - Single kasir, tanpa sistem login/multi-user
-- Tidak ada fitur diskon kompleks (hanya diskon nominal flat, opsional)
+- Diskon hanya berupa nominal flat (bukan persentase), diinput opsional di dialog pembayaran sebelum konfirmasi
 - Tidak ada sinkronisasi cloud atau multi-device
 - Tidak ada manajemen supplier (hanya nama supplier di form penerimaan)
 - Laporan ekspor hanya CSV (bukan PDF)

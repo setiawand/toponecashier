@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.conn = conn
         self.config = config
-        self.setWindowTitle(f"KasirTop — {config.get('store_name', 'Toko')}")
+        self.setWindowTitle(f"TopOneCashier — {config.get('store_name', 'Toko')}")
         self.setMinimumSize(1100, 650)
         self._setup_ui()
 
@@ -29,7 +29,7 @@ class MainWindow(QMainWindow):
         sidebar_layout.setContentsMargins(8, 16, 8, 8)
         sidebar_layout.setSpacing(4)
 
-        logo = QLabel("KasirTop")
+        logo = QLabel("TopOneCashier")
         logo.setObjectName("logoLabel")
         logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         sidebar_layout.addWidget(logo)

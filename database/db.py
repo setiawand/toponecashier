@@ -1,7 +1,7 @@
 import sqlite3
 from pathlib import Path
 
-DB_PATH = Path(__file__).parent.parent / "kasirtop.db"
+DB_PATH = Path(__file__).parent.parent / "toponecashier.db"
 SCHEMA_PATH = Path(__file__).parent / "schema.sql"
 
 

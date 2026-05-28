@@ -30,7 +30,7 @@ def config():
 def test_main_window_creates(qtbot, db, config):
     win = MainWindow(db, config)
     qtbot.addWidget(win)
-    assert win.windowTitle().startswith("KasirTop")
+    assert win.windowTitle().startswith("TopOneCashier")
     assert win.stack.count() == 4
 
 
