@@ -149,6 +149,11 @@ class ProdukView(QWidget):
                     item.setForeground(QColor("#ef4444"))
                 self.table.setItem(row, col, item)
 
+    def showEvent(self, event):
+        super().showEvent(event)
+        current_query = self.search_input.text()
+        self._load(current_query)
+
     def _on_search(self, text: str):
         self._load(text)
 
@@ -180,6 +185,13 @@ class ProdukView(QWidget):
         p = self._selected()
         if not p:
             QMessageBox.information(self, "Hapus", "Pilih produk terlebih dahulu.")
+            return
+        if p["stock"] > 0:
+            QMessageBox.warning(
+                self, "Tidak Bisa Dihapus",
+                f"'{p['name']}' masih memiliki stok {p['stock']} {p['unit']}.\n"
+                "Nolkan stok terlebih dahulu sebelum menghapus produk."
+            )
             return
         reply = QMessageBox.question(
             self, "Hapus", f"Hapus '{p['name']}'?",

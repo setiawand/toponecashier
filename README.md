@@ -11,23 +11,18 @@ Aplikasi kasir desktop untuk toko/warung kecil. Dibangun dengan Python + PyQt6, 
 
 ## Quick Start
 
-**Prasyarat:** Python 3.11+
+**Prasyarat:** Python 3.11+ dan [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ```bash
 # 1. Clone dan masuk ke folder
 git clone <repo-url>
 cd toponecashier
 
-# 2. Buat virtual environment
-python -m venv .venv
-source .venv/bin/activate      # Windows: .venv\Scripts\activate
-
-# 3. Install dependensi
-pip install -r requirements.txt
-
-# 4. Jalankan aplikasi
-python main.py
+# 2. Install dependensi & jalankan
+uv run python main.py
 ```
+
+uv otomatis membuat virtual environment dan menginstall dependensi dari `pyproject.toml`.
 
 Database SQLite dibuat otomatis di `database/kasir.db` saat pertama kali dijalankan.
 
@@ -82,14 +77,11 @@ toponecashier/
 ## Development
 
 ```bash
-# Install dependensi dev
-pip install -r requirements-dev.txt
-
 # Jalankan semua tes
-pytest
+uv run pytest
 
 # Jalankan dengan verbose
-pytest -v
+uv run pytest -v
 ```
 
 ## Dependensi Utama
