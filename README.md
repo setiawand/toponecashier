@@ -9,6 +9,16 @@ Aplikasi kasir desktop untuk toko/warung kecil. Dibangun dengan Python + PyQt6, 
 - **Stok Masuk** — catat penerimaan barang dari supplier
 - **Laporan** — ringkasan penjualan harian/bulanan dengan grafik
 
+## Screenshots
+
+| Kasir | Produk |
+|-------|--------|
+| ![Kasir](assets/screenshots/kasir.png) | ![Produk](assets/screenshots/produk.png) |
+
+| Stok Masuk | Laporan |
+|------------|---------|
+| ![Stok Masuk](assets/screenshots/stok_masuk.png) | ![Laporan](assets/screenshots/laporan.png) |
+
 ## Quick Start
 
 **Prasyarat:** Python 3.11+ dan [uv](https://docs.astral.sh/uv/getting-started/installation/)
