@@ -1,4 +1,4 @@
-# KasirTop
+# TopOneCashier
 
 Aplikasi kasir desktop untuk toko/warung kecil. Dibangun dengan Python + PyQt6, database SQLite lokal, dan dukungan cetak struk thermal printer.
 
